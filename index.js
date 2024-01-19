@@ -66,6 +66,7 @@ app.delete('/ambulances/:id', (req, res) => {
     res.status(200).json(ambulances);
 });
 
-app.listen(8080, () => {
-    console.log('Server started');
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
 });
